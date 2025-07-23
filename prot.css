@@ -55,6 +55,19 @@ h2 {
   margin-bottom: 15px;
   color: #2a5298;
 }
+#text{
+  color: white;
+}
+#about .container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#about .container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 #about {
   background: #f0f2f5;

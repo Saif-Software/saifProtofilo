@@ -43,7 +43,7 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
-      <h2>Projects</h2>
+      <h2 id="text">Projects</h2>
 
       <div class="project">
 <h3>Vehicle Sales & Customer Management System</h3>
@@ -127,6 +127,17 @@
     projects.forEach(project => {
       observer.observe(project);
     });
+     const about = document.querySelector('#about .container');
+
+  const aboutObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  aboutObserver.observe(about);
   </script>
 
 </body>
